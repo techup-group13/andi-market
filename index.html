@@ -4,16 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Lora"],
+              serif: ["Karla"],
+            },
+            plugins: [
+              require("@tailwindcss/typography"),
+              // ...
+            ],
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-slate-800">
+  <body class="bg-slate-800 font-">
     <div class="flex items-center py-4 container mx-auto">
       <img src="./svg/logo.svg" alt="logo" />
       <ul class="flex mx-auto uppercase">
         <li class="mr-6">
-          <a class="text-white" href="#">Home</a>
+          <a class="text-white font-sans" href="#">Home</a>
         </li>
         <li class="mr-6">
-          <a class="text-white" href="#">Abaout</a>
+          <a class="text-white font-serif" href="#">Abaout</a>
         </li>
         <li class="mr-6">
           <a class="text-white" href="#">Menu</a>
@@ -33,22 +49,26 @@
     </div>
 
     <!-- about -->
-    <div class="mx-16 flex items-center">
-      <div class="w-1/2 ml space-y-4">
-        <h1 class="text-white text-5xl font-bold">How it started</h1>
-        <p class="text-gray-200 text-lg">
+    <div class="mx-16 flex items-center container mx-auto">
+      <div class="w-1/2 ml space-y-4 text-white font-serif">
+        <p class="text-4xl mb-6 font-bold">How it started</p>
+        <p class="prose lg:prose-xl">
           Welcome to our restaurant in Michigan, where we serve up delicious
           food with a side of warmth and hospitality. Our menu features a wide
           variety of dishes that are prepared using the freshest ingredients,
           sourced from local farmers and suppliers. Whether you're in the mood
           for a juicy steak, a crisp salad, or a hearty pasta dish, our chefs
-          have got you covered. At our restaurant, we pride ourselves on
-          providing a memorable dining experience, from the moment you step
-          through the door to the last bite of dessert. Our knowledgeable and
-          friendly staff are always on hand to answer any questions you may have
-          and ensure that your dining experience is nothing short of
-          exceptional. So come on down and join us for a meal you won't forget!
+          have got you covered.
         </p>
+
+        <p>
+          At our restaurant, we pride ourselves on providing a memorable dining
+          experience, from the moment you step through the door to the last bite
+          of dessert. Our knowledgeable and friendly staff are always on hand to
+          answer any questions you may have and ensure that your dining
+          experience is nothing short of exceptional.
+        </p>
+        <p>So come on down and join us for a meal you won't forget!</p>
       </div>
       <div class="w-1/2 ml-8">
         <div class="grid grid-cols-2 gap-x-4 gap-y-3">
@@ -58,17 +78,17 @@
             <p class="text-gray-200">Descreption</p>
           </div>
           <div class="border-2 border-orange-300 p-4">
-            <img src="./svg/icon.svg" alt="icon" />
+            <img src="./svg/icon2.svg" alt="icon" />
             <h1 class="text-white text-lg">Title</h1>
             <p class="text-gray-200">Descreption</p>
           </div>
           <div class="border-2 border-orange-300 p-4">
-            <img src="./svg/icon.svg" alt="icon" />
+            <img src="./svg/icon3.svg" alt="icon" />
             <h1 class="text-white text-lg">Title</h1>
             <p class="text-gray-200">Descreption</p>
           </div>
           <div class="border-2 border-orange-300 p-4">
-            <img src="./svg/icon.svg" alt="icon" />
+            <img src="./svg/icon4.svg" alt="icon" />
             <h1 class="text-white text-lg">Title</h1>
             <p class="text-gray-200">Descreption</p>
           </div>
@@ -145,8 +165,17 @@
         </div>
       </div>
     </div>
-    <footer>
-      
-    </footer>
+
+    <div class="container mx-auto mt-28">
+      <div class="h-px w-full bg-orange-300"></div>
+      <div class="flex justify-between my-16">
+        <p class="text-white">© 2023 Good Taste | All rights reserved.</p>
+        <div class="flex space-x-4">
+          <img src="./facebok.svg" alt="facebook" />
+          <img src="./instagram.svg" alt="instagram" />
+          <img src="./tiktok.svg" alt="tiktok" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
